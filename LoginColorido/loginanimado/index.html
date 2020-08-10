@@ -1,0 +1,50 @@
+<!-- Desenvolvido por Santiago Fleitas
+Projeto: Tela de Login Colorida
+Tecnologias: HTML/CSS
+-->
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="shortcut icon" href="C:\Users\San\Desktop\Repositorio\Logos + Favicons\L\favicon.ico"
+  </head>
+  <body>
+
+      <form action="index.html" class="login-form">
+        <h1>Login</h1>
+
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Usuário"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password">
+          <span data-placeholder="Senha"></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Confirmar">
+
+        <div class="bottom-text">
+          Não possui uma conta? <a href="#">Clique aqui</a>
+        </div>
+
+      </form>
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+  </body>
+</html>
